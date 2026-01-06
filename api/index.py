@@ -5,7 +5,14 @@ Este arquivo é o entrypoint para deploy no Vercel.
 Simplesmente exporta a aplicação FastAPI.
 """
 
-from app.main import app
+import sys
+import traceback
 
-# Vercel procura por esta exportação
-__all__ = ["app"]
+try:
+    from app.main import app
+    # Vercel procura por esta exportação
+    __all__ = ["app"]
+except Exception as e:
+    print(f"ERROR importing app: {e}", file=sys.stderr)
+    traceback.print_exc()
+    raise
