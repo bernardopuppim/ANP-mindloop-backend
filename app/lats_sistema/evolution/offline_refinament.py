@@ -175,11 +175,11 @@ def salvar_relatorios(resultados, entropy_tracker, pasta_out="lats_sistema/evolu
     # -------------------------------------------------------
     # GERAR A ÁRVORE v2 (ANOTADA PARA REFINAMENTO)
     # -------------------------------------------------------
-    from lats_sistema.evolution.generators.restructure_tree import (
+    from app.lats_sistema.evolution.generators.restructure_tree import (
         gerar_arvore_v2,
         salvar_arvore_v2
     )
-    from lats_sistema.lats.tree_loader import ARVORE
+    from app.lats_sistema.lats.tree_loader import ARVORE
 
     arvore_v2 = gerar_arvore_v2(
         ARVORE,

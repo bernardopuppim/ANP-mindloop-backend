@@ -19,12 +19,12 @@ logger = logging.getLogger(__name__)
 
 # Imports pesados (RAG/FAISS) - apenas quando NÃO estiver em serverless mode
 if not SERVERLESS_FAST_MODE:
-    from lats_sistema.rag.hyde import hyde_generate
-    from lats_sistema.rag.bm25_search import buscar_bm25
-    from lats_sistema.rag.semantic_search import buscar_semantico
-    from lats_sistema.rag.reranker import rerank
-    from lats_sistema.rag.synthesizer import sintetizar
-    from lats_sistema.vectorstore.corpus_loader import carregar_corpus_normativo
+    from app.lats_sistema.rag.hyde import hyde_generate
+    from app.lats_sistema.rag.bm25_search import buscar_bm25
+    from app.lats_sistema.rag.semantic_search import buscar_semantico
+    from app.lats_sistema.rag.reranker import rerank
+    from app.lats_sistema.rag.synthesizer import sintetizar
+    from app.lats_sistema.vectorstore.corpus_loader import carregar_corpus_normativo
 else:
     # Placeholders para evitar erros de nome não definido
     # Estes nunca serão chamados porque o RAG será bypassado
@@ -82,7 +82,7 @@ def no_rag(state: Dict[str, Any]) -> Dict[str, Any]:
 
     🚀 SERVERLESS MODE: RAG é completamente bypassado quando SERVERLESS_FAST_MODE=true
     """
-    from lats_sistema.config.fast_mode import (
+    from app.lats_sistema.config.fast_mode import (
         SERVERLESS_FAST_MODE,
         FAST_MODE_ENABLED,
         RAG_HYDE_ENABLED,

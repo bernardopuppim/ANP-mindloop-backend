@@ -23,7 +23,7 @@ except ImportError:
     dotenv_available = False
 
 try:
-    from lats_sistema.config.settings import BASE_DIR
+    from app.lats_sistema.config.settings import BASE_DIR
 except ImportError:
     BASE_DIR = Path(__file__).resolve().parents[2]
 

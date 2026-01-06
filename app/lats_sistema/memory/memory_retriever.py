@@ -31,7 +31,7 @@ def buscar_justificativas_semelhantes(descricao_evento: str, node_id: str, k: in
             embed_vec = get_event_embedding(state, descricao_evento)
         else:
             # Fallback se state não foi passado (backward compatibility)
-            from lats_sistema.models.embeddings import embeddings
+            from app.lats_sistema.models.embeddings import embeddings
             embed_vec = embeddings.embed_query(descricao_evento)
             embed_vec = np.array(embed_vec).astype("float32")
     except Exception as e:

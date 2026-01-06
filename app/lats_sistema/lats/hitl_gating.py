@@ -82,7 +82,7 @@ def gerar_hitl_metadata(node: Dict[str, Any], etapa: Dict[str, Any]) -> Dict[str
     2. Ordena por probabilidade
     3. Aplica top-k e threshold de probabilidade mínima
     """
-    from lats_sistema.config.fast_mode import HITL_MIN_PROB, HITL_TOP_K
+    from app.lats_sistema.config.fast_mode import HITL_MIN_PROB, HITL_TOP_K
 
     filhos = etapa.get("children") or []
 

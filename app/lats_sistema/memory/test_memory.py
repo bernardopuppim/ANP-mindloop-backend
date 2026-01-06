@@ -4,7 +4,7 @@ from app.lats_sistema.memory.memory_retriever import buscar_justificativas_semel
 from app.lats_sistema.models.embeddings import embeddings
 import numpy as np
 
-#from lats_sistema.memory.db import init_db; init_db()
+#from app.lats_sistema.memory.db import init_db; init_db()
 
 def test_memory_pipeline():
 

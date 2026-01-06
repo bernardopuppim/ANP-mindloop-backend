@@ -25,8 +25,8 @@ logger = logging.getLogger(__name__)
 # 🔁 Memória de decisões humanas (SQLite + FAISS)
 # ⚠️ SERVERLESS: Memória depende de FAISS, desabilitada em modo serverless
 if not SERVERLESS_FAST_MODE:
-    from lats_sistema.memory.memory_retriever import buscar_justificativas_semelhantes
-    from lats_sistema.memory.memory_saver import salvar_memoria_if_applicable
+    from app.lats_sistema.memory.memory_retriever import buscar_justificativas_semelhantes
+    from app.lats_sistema.memory.memory_saver import salvar_memoria_if_applicable
 else:
     # Placeholders para modo serverless
     def buscar_justificativas_semelhantes(*args, **kwargs):
