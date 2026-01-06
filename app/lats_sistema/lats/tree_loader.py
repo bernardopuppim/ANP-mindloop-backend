@@ -1,11 +1,11 @@
 import os
 import json
 
-# Diretório raiz do projeto (2 níveis acima deste arquivo)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Diretório deste arquivo (onde está arvore_lats.json)
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Caminho correto para o arquivo JSON da árvore (na raiz do projeto)
-TREE_PATH = os.path.join(BASE_DIR, "arvore_lats.json")
+# Caminho correto para o arquivo JSON da árvore (no mesmo diretório)
+TREE_PATH = os.path.join(CURRENT_DIR, "arvore_lats.json")
 
 # Lazy loading: árvore só é carregada quando acessada
 # Importante para cold start no Vercel
