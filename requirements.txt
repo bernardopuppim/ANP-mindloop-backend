@@ -1,0 +1,47 @@
+# ============================================
+# MindLoop Backend - Requirements
+# ============================================
+# Modo serverless optimizado para Vercel
+# Bundle < 250 MB
+# ============================================
+
+# ============================================
+# LLM & LangChain (apenas essenciais)
+# ============================================
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langgraph>=0.2.0
+
+# ❌ REMOVIDO: langchain (muito pesado, usa apenas subpacotes)
+# ❌ REMOVIDO: langchain-community (inclui FAISS)
+
+# ============================================
+# Web Framework (FastAPI + ASGI)
+# ============================================
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# ============================================
+# HTTP e SSL
+# ============================================
+httpx>=0.27.0
+certifi>=2024.0.0
+
+# ============================================
+# Configuração e Validação
+# ============================================
+python-dotenv>=1.0.0
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+
+# ============================================
+# ❌ REMOVIDAS: Dependências RAG/FAISS (Serverless)
+# ============================================
+# Estas dependências são necessárias apenas em modo FULL:
+# - faiss-cpu>=1.8.0          # ~180 MB - biblioteca C++
+# - rank-bm25>=0.2.2          # busca BM25
+# - numpy>=1.26.0             # dependência de FAISS
+# - pandas>=2.2.0             # manipulação de dados
+#
+# Para usar modo FULL com RAG/FAISS:
+# pip install -r requirements-full.txt
