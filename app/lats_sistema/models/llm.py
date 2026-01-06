@@ -5,7 +5,7 @@ Usa factory pattern com OpenAI exclusivo.
 Lazy loading para compatibilidade com serverless (Vercel).
 """
 
-from lats_sistema.models.llm_factory import get_chat_model
+from app.lats_sistema.models.llm_factory import get_chat_model
 
 # Lazy loading: modelos são criados via factory sob demanda
 # O factory já implementa cache interno, então múltiplas chamadas

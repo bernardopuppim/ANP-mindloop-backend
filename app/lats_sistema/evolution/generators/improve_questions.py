@@ -18,7 +18,7 @@ Saída esperada: um dicionário com, por exemplo:
 """
 
 from typing import Dict, Any, List
-from lats_sistema.models.llm import llm_json  # ou llm_text se preferir
+from app.lats_sistema.models.llm import llm_json  # ou llm_text se preferir
 
 
 PROMPT_MELHORIA = """

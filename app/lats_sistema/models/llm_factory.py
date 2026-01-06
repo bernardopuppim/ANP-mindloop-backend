@@ -64,7 +64,7 @@ _embed_model_cache = {}
 # ================================================================
 # FAST_MODE
 # ================================================================
-from lats_sistema.config.fast_mode import FAST_MODE_ENABLED, LLM_MAX_TOKENS
+from app.lats_sistema.config.fast_mode import FAST_MODE_ENABLED, LLM_MAX_TOKENS
 
 # ================================================================
 # FACTORY: CHAT MODEL

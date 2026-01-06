@@ -7,18 +7,18 @@ import math
 import logging
 from typing import Dict, Any, List
 
-from lats_sistema.lats.utils import (
+from app.lats_sistema.lats.utils import (
     eh_terminal,
     softmax,
     temperatura_por_profundidade,
     shannon_entropy,
 )
-from lats_sistema.lats.evaluator import avaliar_filhos_llm
-from lats_sistema.lats.tree_loader import NODE_INDEX, ROOT_ID
-from lats_sistema.lats.hitl_gating import precisa_hitl, gerar_hitl_metadata
+from app.lats_sistema.lats.evaluator import avaliar_filhos_llm
+from app.lats_sistema.lats.tree_loader import NODE_INDEX, ROOT_ID
+from app.lats_sistema.lats.hitl_gating import precisa_hitl, gerar_hitl_metadata
 
 # ⚡ FAST_MODE support (NÃO afeta HITL)
-from lats_sistema.config.fast_mode import LATS_MAX_STEPS, LATS_TOP_FINAIS, SERVERLESS_FAST_MODE
+from app.lats_sistema.config.fast_mode import LATS_MAX_STEPS, LATS_TOP_FINAIS, SERVERLESS_FAST_MODE
 
 logger = logging.getLogger(__name__)
 

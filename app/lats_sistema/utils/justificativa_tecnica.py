@@ -8,8 +8,8 @@ adequado para comunicação à ANP, sem mencionar o funcionamento interno do sis
 
 from typing import Dict, Any, List
 from langchain_core.prompts import ChatPromptTemplate
-from lats_sistema.models.llm import llm_text
-from lats_sistema.lats.tree_loader import NODE_INDEX
+from app.lats_sistema.models.llm import llm_text
+from app.lats_sistema.lats.tree_loader import NODE_INDEX
 
 
 def extrair_informacoes_factuais(historico: List[Dict[str, Any]], node_id_final: str) -> Dict[str, str]:

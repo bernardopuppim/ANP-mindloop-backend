@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from lats_sistema.models.llm import llm_text
+from app.lats_sistema.models.llm import llm_text
 
 prompt_synth = ChatPromptTemplate.from_template("""
 Crie um resumo técnico relacionando o evento aos trechos normativos:

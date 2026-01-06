@@ -2,9 +2,9 @@
 # memory_saver.py — lógica de salvamento inteligente de memória HITL
 # ================================================================
 
-from lats_sistema.memory.db import insert_decision
-from lats_sistema.memory.faiss_store import add_vector, search_vectors
-from lats_sistema.models.embeddings import embeddings
+from app.lats_sistema.memory.db import insert_decision
+from app.lats_sistema.memory.faiss_store import add_vector, search_vectors
+from app.lats_sistema.models.embeddings import embeddings
 import numpy as np
 
 ENTROPY_THRESHOLD = 1.0

@@ -5,7 +5,7 @@ Usa factory pattern com OpenAI exclusivo.
 Lazy loading para compatibilidade com serverless (Vercel).
 """
 
-from lats_sistema.models.llm_factory import get_embedding_model
+from app.lats_sistema.models.llm_factory import get_embedding_model
 
 # Lazy loading via __getattr__ para compatibilidade com imports existentes
 _cache = {}

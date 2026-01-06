@@ -2,7 +2,7 @@
 
 from .db import get_decision_by_id
 from .faiss_store import search_vectors
-from lats_sistema.utils.embedding_cache import get_event_embedding
+from app.lats_sistema.utils.embedding_cache import get_event_embedding
 import numpy as np
 
 

@@ -1,4 +1,4 @@
-from lats_sistema.vectorstore.faiss_loader import load_faiss_store
+from app.lats_sistema.vectorstore.faiss_loader import load_faiss_store
 
 def buscar_semantico(query):
     store = load_faiss_store()

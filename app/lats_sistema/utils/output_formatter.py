@@ -7,8 +7,8 @@ clara, limpa e orientada a decisão para o usuário final.
 """
 
 from typing import Dict, Any, List, Optional
-from lats_sistema.lats.tree_loader import NODE_INDEX
-from lats_sistema.utils.justificativa_tecnica import gerar_justificativa_tecnica_llm
+from app.lats_sistema.lats.tree_loader import NODE_INDEX
+from app.lats_sistema.utils.justificativa_tecnica import gerar_justificativa_tecnica_llm
 
 
 def extrair_classe_limpa(node_id: str) -> str:

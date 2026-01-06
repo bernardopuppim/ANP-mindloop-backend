@@ -4,7 +4,7 @@
 
 from langgraph.graph import StateGraph, END
 
-from lats_sistema.graph.nodes import no_rag, no_classificar, no_hitl, no_hitl_final
+from app.lats_sistema.graph.nodes import no_rag, no_classificar, no_hitl, no_hitl_final
 
 def build_graph():
     graph = StateGraph(dict)

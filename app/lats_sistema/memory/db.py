@@ -6,7 +6,7 @@ from typing import Dict, Any, Optional
 import datetime
 import numpy as np
 
-from lats_sistema.models.embeddings import embeddings
+from app.lats_sistema.models.embeddings import embeddings
 
 DB_PATH = Path(__file__).resolve().parent / "decisions.db"
 

@@ -9,11 +9,11 @@ import logging
 # ===================================================================
 # LAZY IMPORTS CONDICIONAIS - Evita carregar FAISS em SERVERLESS MODE
 # ===================================================================
-from lats_sistema.config.fast_mode import SERVERLESS_FAST_MODE
+from app.lats_sistema.config.fast_mode import SERVERLESS_FAST_MODE
 
 # Imports sempre necessários (não dependem de FAISS)
-from lats_sistema.lats.engine import executar_lats
-from lats_sistema.lats.tree_loader import NODE_INDEX
+from app.lats_sistema.lats.engine import executar_lats
+from app.lats_sistema.lats.tree_loader import NODE_INDEX
 
 logger = logging.getLogger(__name__)
 

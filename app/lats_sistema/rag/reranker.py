@@ -1,7 +1,7 @@
 import json
 from langchain_core.prompts import ChatPromptTemplate
-from lats_sistema.models.llm import llm_json
-from lats_sistema.utils.json_utils import invoke_json
+from app.lats_sistema.models.llm import llm_json
+from app.lats_sistema.utils.json_utils import invoke_json
 
 # ⚡ OTIMIZAÇÃO: Threshold para bypass do rerank LLM
 # Se há apenas 1 candidato ou poucos candidatos, rerank LLM é desnecessário

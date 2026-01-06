@@ -1,4 +1,4 @@
-from lats_sistema.graph.build import build_graph
+from app.lats_sistema.graph.build import build_graph
 
 def simular_humano(state):
     print("\n🔔 HITL acionado!")

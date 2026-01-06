@@ -2,9 +2,9 @@
 import json
 from typing import Dict, Any, List
 from langchain_core.prompts import ChatPromptTemplate
-from lats_sistema.models.llm import llm_json
-from lats_sistema.lats.utils import formatar_filhos
-from lats_sistema.utils.json_utils import invoke_json
+from app.lats_sistema.models.llm import llm_json
+from app.lats_sistema.lats.utils import formatar_filhos
+from app.lats_sistema.utils.json_utils import invoke_json
 
 # ---------------------------------------------------------
 # Avaliação via LLM – compara EVENTO vs FILHOS do nó atual

@@ -1,6 +1,6 @@
 import os, re, tiktoken
 from typing import List
-from lats_sistema.vectorstore.faiss_loader import faiss_store
+from app.lats_sistema.vectorstore.faiss_loader import faiss_store
 
 encoding = tiktoken.get_encoding("o200k_base")
 

@@ -7,7 +7,7 @@ Calcular uma vez e reutilizar economiza ~50-80% das chamadas à API de embedding
 """
 
 from typing import Optional, List
-from lats_sistema.models.embeddings import embeddings
+from app.lats_sistema.models.embeddings import embeddings
 
 
 def get_event_embedding(state: dict, evento_texto: str) -> List[float]:

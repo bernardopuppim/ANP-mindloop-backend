@@ -12,7 +12,7 @@ import json
 from copy import deepcopy
 from typing import Dict, Any
 
-from lats_sistema.evolution.generators.improve_questions import (
+from app.lats_sistema.evolution.generators.improve_questions import (
     sugerir_melhoria_pergunta
 )
 

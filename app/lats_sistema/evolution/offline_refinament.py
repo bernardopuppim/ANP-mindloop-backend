@@ -14,13 +14,13 @@ from datetime import datetime
 # ================================
 # IMPORTS DO SISTEMA LATS
 # ================================
-from lats_sistema.lats.engine import executar_lats
-from lats_sistema.lats.tree_loader import ARVORE, NODE_INDEX, ROOT_ID
+from app.lats_sistema.lats.engine import executar_lats
+from app.lats_sistema.lats.tree_loader import ARVORE, NODE_INDEX, ROOT_ID
 
 # ================================
 # MÉTRICAS
 # ================================
-from lats_sistema.evolution.metrics.entropy_tracker import EntropyTracker
+from app.lats_sistema.evolution.metrics.entropy_tracker import EntropyTracker
 
 
 # ==============================================================================

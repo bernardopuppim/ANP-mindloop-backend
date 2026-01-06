@@ -1,7 +1,7 @@
-from lats_sistema.memory.db import insert_memory_simple, get_decision_by_id
-from lats_sistema.memory.faiss_store import add_vector, search_vectors
-from lats_sistema.memory.memory_retriever import buscar_justificativas_semelhantes
-from lats_sistema.models.embeddings import embeddings
+from app.lats_sistema.memory.db import insert_memory_simple, get_decision_by_id
+from app.lats_sistema.memory.faiss_store import add_vector, search_vectors
+from app.lats_sistema.memory.memory_retriever import buscar_justificativas_semelhantes
+from app.lats_sistema.models.embeddings import embeddings
 import numpy as np
 
 #from lats_sistema.memory.db import init_db; init_db()

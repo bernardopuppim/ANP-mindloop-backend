@@ -1,6 +1,6 @@
 from pathlib import Path
 from langchain_community.vectorstores import FAISS
-from lats_sistema.models.llm_factory import get_embedding_model
+from app.lats_sistema.models.llm_factory import get_embedding_model
 
 # Ajuste aqui se quiser outro path
 INDEX_PATH = Path("data/faiss/index_anp")
