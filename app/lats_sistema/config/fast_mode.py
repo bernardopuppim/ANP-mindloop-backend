@@ -21,7 +21,7 @@ from typing import Dict, Any
 # ===================================================================
 # CONFIGURAÇÃO FAST_MODE
 # ===================================================================
-FAST_MODE_ENABLED = os.getenv("FAST_MODE", "0") == "1"
+FAST_MODE_ENABLED = os.getenv("FAST_MODE", "0").strip() == "1"
 
 
 # ===================================================================
@@ -35,7 +35,9 @@ FAST_MODE_ENABLED = os.getenv("FAST_MODE", "0") == "1"
 # - ✅ Mantém 100% da lógica LATS-P (heurísticas, poda, entropia, HITL)
 # - ✅ RAG é automaticamente bypassado no grafo
 # Compatibilidade: aceita SERVERLESS_MODE ou SERVERLESS_FAST_MODE
-SERVERLESS_FAST_MODE = os.getenv("SERVERLESS_MODE", os.getenv("SERVERLESS_FAST_MODE", "0")) == "1"
+# CORREÇÃO: .strip() para remover quebras de linha que podem vir do Vercel
+_serverless_val = os.getenv("SERVERLESS_MODE", os.getenv("SERVERLESS_FAST_MODE", "0")).strip()
+SERVERLESS_FAST_MODE = _serverless_val == "1"
 
 
 # ===================================================================
@@ -43,7 +45,7 @@ SERVERLESS_FAST_MODE = os.getenv("SERVERLESS_MODE", os.getenv("SERVERLESS_FAST_M
 # ===================================================================
 # HyDE está DESLIGADO por padrão
 # Para habilitar, defina USE_HYDE=1 no .env
-USE_HYDE = os.getenv("USE_HYDE", "0") == "1"
+USE_HYDE = os.getenv("USE_HYDE", "0").strip() == "1"
 
 
 # ===================================================================
@@ -57,7 +59,7 @@ USE_HYDE = os.getenv("USE_HYDE", "0") == "1"
 #   - Quando memória FAISS estiver habilitada
 #
 # Para SEMPRE executar RAG (comportamento anterior), defina SKIP_RAG_DEFAULT=0
-SKIP_RAG_DEFAULT = os.getenv("SKIP_RAG_DEFAULT", "1") == "1"
+SKIP_RAG_DEFAULT = os.getenv("SKIP_RAG_DEFAULT", "1").strip() == "1"
 
 
 # ===================================================================

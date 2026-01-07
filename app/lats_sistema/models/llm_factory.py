@@ -50,6 +50,11 @@ if not OPENAI_API_KEY:
         "Configure: OPENAI_API_KEY=sk-..."
     )
 
+# Debug: Log que a chave foi carregada (apenas primeiros caracteres)
+if OPENAI_API_KEY:
+    logging.info(f"✅ OPENAI_API_KEY carregada: {OPENAI_API_KEY[:15]}...")
+    logging.info(f"✅ OPENAI_CHAT_MODEL: {OPENAI_CHAT_MODEL}")
+
 # ================================================================
 # IMPORTS
 # ================================================================

@@ -616,7 +616,7 @@
                           "subnodos":[{"id":"pesado_classe_2_terminal","classe":"Classe 2","tipo":"terminal"}]},
                         { "id": "classe_3_pesado", "pergunta": "Entre 0,1 e 10 m³?", "tipo": "decisao",
                           "subnodos":[{"id":"pesado_classe_3_terminal","classe":"Classe 3","tipo":"terminal"}]},
-                        { "id": "classe_4_pesado", "pergunta": "Acima de 10 m³?", "tipo": "decisao",
+                        { "id": "classe_4_pesado", "pergunta": "Extraia a informação do volume em m³ e compare se é superior a 10 m³?", "tipo": "decisao",
                           "subnodos":[{"id":"pesado_classe_4_terminal","classe":"Classe 4","tipo":"terminal"}]}
                       ]
                     }

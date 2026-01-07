@@ -63,14 +63,18 @@ Retorne **apenas JSON**:
 
     # Usar invoke_json com retry automático
     try:
+        print(f"🔄 Chamando LLM para avaliar {len(filhos)} filhos...")
         data = invoke_json(
             llm_json,
             full_prompt,
             max_retries=2,
             schema_hint='{"avaliacoes": [{"id": "...", "score": 0.0, "justificativa": "..."}]}'
         )
+        print(f"✅ LLM respondeu com sucesso")
     except Exception as e:
-        print(f"[ERRO] JSON inválido em avaliar_filhos_llm após retries: {e}")
+        print(f"[ERRO] Falha ao chamar LLM em avaliar_filhos_llm: {type(e).__name__}: {e}")
+        import traceback
+        print(traceback.format_exc())
         return []
 
     aval = data.get("avaliacoes", [])
